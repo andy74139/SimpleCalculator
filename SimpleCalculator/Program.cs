@@ -9,12 +9,10 @@ namespace SimpleCalculator
     class Program
     {
         private static ConsoleController _consoleController;
-        private static CalculatorCore _calculatorCore;
 
         static Program()
         {
             _consoleController = new ConsoleController();
-            _calculatorCore = new CalculatorCore();
         }
 
         static void Main(string[] args)
@@ -22,7 +20,7 @@ namespace SimpleCalculator
             while (true)
             {
                 var calStatement = _consoleController.GetCalculationStatement();
-                var result = _calculatorCore.Calculate(calStatement);
+                var result = calStatement.GetResult();
                 _consoleController.ResponseCalculationResult(result);
             }
         }
