@@ -9,14 +9,14 @@ namespace SimpleCalculator
     {
         public CalculationStatement GetCalculationStatement()
         {
-            var operators = new[] { '+', '-', '*', '/' };
+            var operators = new[] { '+', '-', '*', '/', '%' };
             bool isValidCalculation;
             string input;
             do
             {
                 Console.WriteLine("Please enter your calculation: ");
                 input = Console.ReadLine();
-                isValidCalculation = Regex.IsMatch(input, @"^\d+[\+\-\*\/]\d+$");
+                isValidCalculation = Regex.IsMatch(input, @"^\d+[\+\-\*\/\%]\d+$");
                 if (!isValidCalculation)
                     Console.WriteLine("Wrong input!");
             } while (!isValidCalculation);

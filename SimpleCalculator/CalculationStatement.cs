@@ -12,6 +12,7 @@ namespace SimpleCalculator
             {'-', CalculationOperator.Subtraction},
             {'*', CalculationOperator.Multiplication},
             {'/', CalculationOperator.Division},
+            {'%', CalculationOperator.Modulo},
         });
 
         public int Operand1 { get; set; }
@@ -41,6 +42,8 @@ namespace SimpleCalculator
                     return operand1 * operand2;
                 case CalculationOperator.Division:
                     return operand1 / operand2;
+                case CalculationOperator.Modulo:
+                    return operand1 % operand2;
                 default:
                     throw new InvalidOperationException("Invalid operator.");
             }

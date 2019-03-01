@@ -5,6 +5,7 @@
         Addition,
         Subtraction,
         Multiplication, 
-        Division
+        Division,
+        Modulo
     }
 }
