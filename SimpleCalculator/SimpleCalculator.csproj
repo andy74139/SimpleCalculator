@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculationOperator.cs" />
+    <Compile Include="CalculationStatement.cs" />
+    <Compile Include="CalculatorCore.cs" />
+    <Compile Include="ConsoleController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
